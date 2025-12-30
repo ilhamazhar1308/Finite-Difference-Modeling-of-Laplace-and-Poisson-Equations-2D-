@@ -9,7 +9,7 @@ numerical modeling and its applications in **geophysics**.
 
 ---
 
-## 📌 Purpose of This Repository
+## Purpose of This Repository
 
 This project was created to:
 
@@ -26,7 +26,7 @@ and experimentation.
 
 ---
 
-## 📘 Educational Goals
+## Educational Goals
 
 By studying and running these codes, users will learn:
 
@@ -37,7 +37,7 @@ By studying and running these codes, users will learn:
 
 ---
 
-## 🔢 Numerical Method Used
+## Numerical Method Used
 
 Both models use the **Finite Difference Method (FDM)** with an iterative approach.
 
@@ -46,7 +46,7 @@ until the solution reaches a steady state.
 
 ---
 
-## 🔹 Laplace Equation
+## Laplace Equation
 
 ### Governing Equation
 
@@ -69,7 +69,7 @@ Laplace equation is commonly used as a **baseline or reference model**.
 
 ---
 
-## 🔹 Poisson Equation
+## Poisson Equation
 
 ### Governing Equation
 
@@ -91,9 +91,9 @@ Poisson equation represents **more realistic Earth conditions**.
 
 ---
 
-## 🌍 Applications in Geophysics
+## Applications in Geophysics
 
-### 1️⃣ Geothermal and Heat Transfer Modeling
+### 1️ Geothermal and Heat Transfer Modeling
 
 - **Laplace equation**
   - Steady-state heat conduction
@@ -135,7 +135,7 @@ Applications include:
 
 ---
 
-## 🧭 Role of Laplace and Poisson in Geophysics
+## Role of Laplace and Poisson in Geophysics
 
 | Aspect | Laplace | Poisson |
 |------|--------|--------|
@@ -150,7 +150,7 @@ In real geophysical studies:
 
 ---
 
-## 📂 Repository Contents
+## Repository Contents
 
 - `Laplace_2D.py`  
   2D heat transfer modeling using Laplace equation
@@ -166,7 +166,7 @@ In real geophysical studies:
 
 ---
 
-## 🎓 Intended Users
+## Intended Users
 
 This repository is suitable for:
 
@@ -177,7 +177,7 @@ This repository is suitable for:
 
 ---
 
-## 🚀 Possible Future Development
+## Possible Future Development
 
 - Extension to 3D modeling
 - Gauss–Seidel or SOR iteration schemes
@@ -186,10 +186,10 @@ This repository is suitable for:
 
 ---
 
-## 👤 Author
+## Author
 
-**M. Ilham Azhar**  
-Geophysics Student  
+**Ilham Azhar**  
+Geophysics Engineering Student  | Institute Technology of Sumatera
 Numerical Modeling and Potential Field Methods
 
 ---
