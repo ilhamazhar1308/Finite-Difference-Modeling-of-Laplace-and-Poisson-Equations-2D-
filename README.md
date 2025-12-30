@@ -1,179 +1,186 @@
 # Finite-Difference-Modeling-of-Laplace-and-Poisson-Equations-2D-
 
-# 2D Laplace and Poisson Equation Solver for Geophysical Applications
-This repository contains Python implementations of the **2D Laplace and Poisson equations**
-solved using the **finite difference method**.  
-The codes are developed for **educational purposes** to help students understand numerical
-modeling of potential fields and heat transfer, with direct relevance to **geophysical
-applications**.
+# 2D Laplace and Poisson Equation Modeling for Geophysical Applications
+
+This repository contains Python programs for solving the **2D Laplace and Poisson equations**
+using the **finite difference method**.  
+The codes are designed for **educational purposes**, especially for students learning
+numerical modeling and its applications in **geophysics**.
 
 ---
 
-## 📌 Purpose of This Project
+## 📌 Purpose of This Repository
 
-This project is created to:
+This project was created to:
 
-- Introduce **numerical solutions of partial differential equations (PDEs)**  
-- Demonstrate the difference between **Laplace** and **Poisson** equations  
-- Show how **boundary conditions and internal sources** affect physical fields  
-- Provide a foundation for **geophysical modeling**, such as:
-  - geothermal heat flow
+- Help students understand **numerical solutions of partial differential equations (PDEs)**
+- Demonstrate the difference between **Laplace** and **Poisson** equations
+- Show how **boundary conditions** and **internal sources** affect physical fields
+- Provide a basic foundation for **geophysical modeling**, such as:
+  - geothermal heat transfer
   - gravity and magnetic potential fields
   - subsurface physical interpretation
 
-The codes are intentionally kept **simple and transparent** so they can be used as
-a **learning tool** in geophysics, physics, or engineering courses.
+The programs are intentionally written in a **simple and clear form** to support learning
+and experimentation.
 
 ---
 
-## 📘 Educational Objectives
+## 📘 Educational Goals
 
-By using this repository, users will learn:
+By studying and running these codes, users will learn:
 
-- How to discretize 2D domains using a finite difference grid
-- How iterative numerical schemes work (Jacobi-type iteration)
-- The physical meaning of boundary-controlled vs source-controlled systems
-- The role of Laplace and Poisson equations in real geophysical problems
+- How a 2D physical domain is discretized into a numerical grid
+- How iterative finite difference schemes work
+- The physical meaning of equilibrium systems
+- Why internal sources create anomalies in geophysical fields
 
 ---
 
-## 🔢 Numerical Method
+## 🔢 Numerical Method Used
 
-Both programs use the **Finite Difference Method (FDM)** with a regular 2D grid.
+Both models use the **Finite Difference Method (FDM)** with an iterative approach.
 
-Each interior grid point is updated iteratively using neighboring values until a
-steady-state solution is reached.
+Each interior grid point is updated using the values of its four neighboring points
+until the solution reaches a steady state.
 
 ---
 
 ## 🔹 Laplace Equation
 
-### Mathematical Form
-\[
-\nabla^2 T = 0
-\]
+### Governing Equation
+
+Laplace equation (2D):
+
+    ∇²T = 0
 
 ### Physical Meaning
-- No internal source or sink exists inside the domain
+
+- There is **no internal source or sink** inside the domain
 - The field is controlled **only by boundary conditions**
 - Represents a **steady-state equilibrium system**
 
-### Numerical Scheme
-\[
-T_{i,j} =
-\frac{1}{4}
-\left(
-T_{i+1,j} + T_{i-1,j} + T_{i,j+1} + T_{i,j-1}
-\right)
-\]
+### Numerical Interpretation
 
-### Interpretation
-The temperature (or potential) at a point is the **average of its four neighboring points**.
+At each grid point, the temperature (or potential) is computed as the **average of its
+four neighboring points**.
+
+Laplace equation is commonly used as a **baseline or reference model**.
 
 ---
 
 ## 🔹 Poisson Equation
 
-### Mathematical Form
-\[
-\nabla^2 T = -S
-\]
+### Governing Equation
+
+Poisson equation (2D):
+
+    ∇²T = −S
 
 where:
-- \( S \) is an **internal source term**
+
+- S is an **internal source term**
 
 ### Physical Meaning
-- The system contains **internal heat generation or physical sources**
-- Both boundary conditions and internal properties control the solution
-- Produces **localized anomalies**
 
-### Numerical Scheme
-\[
-T_{i,j} =
-\frac{1}{4}
-\left(
-T_{i+1,j} + T_{i-1,j} + T_{i,j+1} + T_{i,j-1}
-\right)
-- \frac{h^2}{4} S
-\]
+- The domain contains **internal heat generation or physical sources**
+- The solution is influenced by **both boundary conditions and internal properties**
+- Produces **localized anomalies** in the field
+
+Poisson equation represents **more realistic Earth conditions**.
 
 ---
 
 ## 🌍 Applications in Geophysics
 
-### 1️⃣ Geothermal and Heat Flow Studies
-- **Laplace**: steady heat conduction without internal heat sources  
-- **Poisson**: geothermal reservoirs, magma chambers, or radioactive heat production  
+### 1️⃣ Geothermal and Heat Transfer Modeling
+
+- **Laplace equation**
+  - Steady-state heat conduction
+  - No internal heat production
+  - Useful for background thermal modeling
+
+- **Poisson equation**
+  - Geothermal reservoirs
+  - Magma bodies
+  - Radiogenic heat sources
 
 Used to model:
 - subsurface temperature distribution
 - geothermal gradients
-- heat transport in the Earth's crust
+- heat flow in the Earth's crust
 
 ---
 
-### 2️⃣ Gravity and Magnetic Modeling
-The governing equation for gravitational potential is:
+### 2️⃣ Gravity and Magnetic Methods
 
-\[
-\nabla^2 \Phi = -4\pi G \rho
-\]
+In gravity modeling, the governing equation is:
 
-- **Laplace**: regions without mass anomalies (\( \rho = 0 \))
-- **Poisson**: regions containing density contrasts (\( \rho \neq 0 \))
+    ∇²Φ = −4πGρ
 
-Applications:
+- Laplace equation applies when density contrast is zero
+- Poisson equation applies when density contrast exists
+
+Applications include:
 - forward modeling of gravity anomalies
 - interpretation of subsurface density structures
-- foundation of gravity inversion methods
+- foundation of gravity inversion techniques
 
 ---
 
 ### 3️⃣ Electrical and Electromagnetic Methods
-- **Laplace**: potential field without current sources
-- **Poisson**: current injection in resistivity surveys
+
+- Laplace equation: potential field without current sources
+- Poisson equation: current injection in resistivity surveys
 
 ---
 
-## 🧭 Why Laplace and Poisson Are Important in Geophysics
+## 🧭 Role of Laplace and Poisson in Geophysics
 
 | Aspect | Laplace | Poisson |
 |------|--------|--------|
 | Internal source | No | Yes |
-| Complexity | Simple | More realistic |
-| Physical meaning | Boundary-controlled | Source-controlled |
-| Use case | Baseline modeling | Anomaly modeling |
+| Physical realism | Idealized | Realistic |
+| Field behavior | Smooth | Anomalous |
+| Typical use | Baseline modeling | Target interpretation |
 
-In practice:
-- **Laplace equations represent idealized systems**
-- **Poisson equations represent real Earth conditions**
+In real geophysical studies:
+- **Laplace equation represents ideal conditions**
+- **Poisson equation represents real subsurface conditions**
 
 ---
 
 ## 📂 Repository Contents
 
-- `Laplace_2D.py` — 2D Laplace heat transfer model
-- `Poisson_2D.py` — 2D Poisson heat transfer model with internal source
-- `Laplace.txt` — Output temperature field (Laplace)
-- `Poisson.txt` — Output temperature field (Poisson)
+- `Laplace_2D.py`  
+  2D heat transfer modeling using Laplace equation
+
+- `Poisson_2D.py`  
+  2D heat transfer modeling using Poisson equation with internal source
+
+- `Laplace.txt`  
+  Output temperature field from Laplace model
+
+- `Poisson.txt`  
+  Output temperature field from Poisson model
 
 ---
 
-## 🎓 Target Users
+## 🎓 Intended Users
 
 This repository is suitable for:
+
 - Geophysics students
 - Physics and engineering students
-- Anyone learning numerical modeling of PDEs
-- Beginners preparing for gravity, geothermal, or potential field modeling
+- Beginners in numerical modeling
+- Anyone learning potential field methods
 
 ---
 
-## 🚀 Future Extensions
+## 🚀 Possible Future Development
 
-Possible future developments include:
-- 3D modeling
-- Gauss–Seidel or SOR schemes
+- Extension to 3D modeling
+- Gauss–Seidel or SOR iteration schemes
 - Error-based convergence criteria
 - Application to gravity and magnetic inversion problems
 
@@ -183,10 +190,11 @@ Possible future developments include:
 
 **M. Ilham Azhar**  
 Geophysics Student  
-Numerical Modeling & Potential Field Methods
+Numerical Modeling and Potential Field Methods
 
 ---
 
 ## 📜 License
 
 This project is intended for **educational and academic use**.
+
