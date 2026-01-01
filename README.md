@@ -1,4 +1,3 @@
-# Finite-Difference-Modeling-of-Laplace-and-Poisson-Equations-2D-
 
 # 2D Laplace and Poisson Equation Modeling for Geophysical Applications
 
