@@ -189,7 +189,7 @@ This repository is suitable for:
 ## Author
 
 **Ilham Azhar**  
-Geophysics Engineering Student  | Institute Technology of Sumatera
+Geophysics Engineering Student  | Sumatera Institute of Technology (ITERA) 
 
 Numerical Modeling and Potential Field Methods
 
